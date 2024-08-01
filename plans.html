@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Details</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .plan-details {
+            background-color: orange;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .plan-details h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .plans {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .plan {
+            width: 48%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .plan:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+        }
+
+        .plan img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .plan h2 {
+            text-align: center;
+            margin-top: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="plan-details">
+            <h1>Plan Details</h1>
+            <div class="buttons">
+                <div class="button" onclick="openSitePlan()">Site Plan</div>
+                <div class="button" onclick="openUnitPlans()">Unit Plans</div>
+            </div>
+            <div class="plans">
+                <div class="plan" id="sitePlan" style="display: none;">
+                    <img src="site.png" alt="Site Plan">
+                    <h2>Site Classic</h2>
+                </div>
+                <div class="plan" id="unitPlans" style="display: none;">
+                    <img src="2BHKClassic.jpg" alt="1 BHK Premium Plan">
+                    <h2>2 BHK Classic</h2>
+                </div>
+                <div class="plan" id="unitPlans2" style="display: none;">
+                    <img src="2BHKPre.jpg" alt="2 BHK Premium Plan">
+                    <h2>2 BHK Premium</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openSitePlan() {
+            document.getElementById('sitePlan').style.display = 'block';
+            document.getElementById('unitPlans').style.display = 'none';
+            document.getElementById('unitPlans2').style.display = 'none';
+            document.getElementById('unitPlans3').style.display = 'none';
+        }
+
+        function openUnitPlans() {
+            document.getElementById('sitePlan').style.display = 'none';
+            document.getElementById('unitPlans').style.display = 'block';
+            document.getElementById('unitPlans2').style.display = 'block';
+            document.getElementById('unitPlans3').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

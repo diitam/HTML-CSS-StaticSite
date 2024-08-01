@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: orange;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1;
+        }
+
+        .map-container {
+            flex: 0 0 40%;
+            margin-top:7%;
+            margin-right: 20px;
+            max-width: 500px; /* Optional: Maximum width for the map */
+            height: 450px;    /* Fixed height for the map */
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .info-container {
+            flex: 1;
+            background-color:white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .info-container h1 {
+            margin-top: 0;
+            font-size: 35px;
+            color: #333333;
+        }
+
+        .info-container h2 {
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+
+        .info-container p {
+            margin: 5px 0; /* Reduced margin to decrease line spacing */
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.162843136737!2d72.834657!3d18.921969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c64f10075d3b%3A0x42baf16a2a39cc0!2sGateway%20of%20India!5e0!3m2!1sen!2sin!4v1626167470403!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="info-container">
+            <h1>Saraswati Builders, Elite Residence,</h1>
+            <p>123-A, Main Avenue, Near XYZ Mall, Downtown City, New York – 10001.</p>
+            <h2>Nearby Landmarks</h2>
+            <p>Adjacent to Main Avenue</p>
+            <p>City Hospital – 0.8 km*</p>
+            <p>Future Transit Hub – 300 m</p>
+            <p>Central Library – 0.9 km*</p>
+            <p>Green Park – 600 m</p>
+            <p>High School of Excellence – 1.2 km</p>
+            <p>Broadway Street – 2.5 km</p>
+            <p>Community College – 2.8 km</p>
+            <p>City Expressway – 4 km</p>
+            <p>Arts and Science Academy – 2.9 km</p>
+            <p>Movie Theater – Across the street</p>
+            <p>SuperMart – 0.8 km</p>
+            <p>Shopping Plaza – 3 km</p>
+            <p>Sports Club – 4 km</p>
+            <p>*Via New City Road</p>
+        </div>
+    </div>
+</body>
+</html>
